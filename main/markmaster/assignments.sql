@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `assignments` (
   `due_date` date DEFAULT NULL,
   `type` enum('assignment','test') NOT NULL,
   PRIMARY KEY (`assignment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 

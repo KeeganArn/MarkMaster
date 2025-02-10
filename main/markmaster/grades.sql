@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `grades` (
   `score` decimal(5,2) NOT NULL,
   `graded_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`grade_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 

@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS `classes` (
   `overall_grade` decimal(5,2) DEFAULT NULL,
   PRIMARY KEY (`class_id`),
   UNIQUE KEY `class_code` (`class_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Data exporting was unselected.
 
