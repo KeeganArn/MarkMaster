@@ -10,57 +10,46 @@ body {
 }
 
 /* Header */
+/* Header */
 header {
     background-color: rgba(51, 51, 51, 0.8);
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Centers content horizontally */
     padding: 15px 20px;
     font-size: 18px;
 }
 
-.menu {
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.title {
-    flex-grow: 1;
-    text-align: center;
-    color: #4A90E2;
-    font-style: italic;
-    font-size: 22px;
-}
 
 .help {
     cursor: pointer;
 }
 
-/* Main Layout */
-main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px 10%;
+/* Typing Effect Section */
+.typing-effect {
+    margin-top: 20px;
+    font-size: 24px;
+    color: white;
+    text-align: center;
 }
 
-.side-panel {
-    width: 25%;
-    background-color: rgba(74, 144, 226, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    min-height: 200px;
-}
-
+/* Logo Container with Glassmorphism Effect */
 .logo-container {
     width: 40%;
-    background-color: rgba(18, 38, 58, 0.9);
+    margin: 40px auto;
     padding: 60px;
-    font-size: 24px;
-    font-weight: bold;
-    border-radius: 10px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo {
+    width: 100%;
+    height: auto;
 }
 
 /* Login Section */
@@ -81,12 +70,4 @@ main {
     font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
-}
-
-/* Footer */
-footer {
-    padding: 20px;
-    font-size: 14px;
-    color: lightgray;
-    margin-top: 30px;
 }

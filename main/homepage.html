@@ -3,43 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School Login</title>
+    <title>MarkMaster™</title>
     <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
     <header>
-        <div class="menu">&#9776;</div>
-        <span class="school-name">SCHOOL NAME</span>
-        <span class="title">MarkMaster™</span>
-        <span class="help">Help</span>
+        <p>This is an example: <span class="example-selector"></span></p>
+
+        <script src="dist/autotyping.min.js"></script>
     </header>
 
     <main>
-        <aside class="side-panel left">
-            <h2>School External Links</h2>
-            <p>Email</p>
-            <p>Website</p>
-            <p>Etc.</p>
-        </aside>
-
-        <section class="logo-container">
-            <h1>SCHOOL LOGO</h1>
+        <section class="typing-effect">
+            <span id="auto-type"></span>
         </section>
 
-        <aside class="side-panel right">
-            <h2>School Social Feed</h2>
-            <p>Twitter or something idk</p>
-        </aside>
+        <section class="logo-container">
+            <img src="markmasterlogo.png" alt="MarkMaster Logo" class="logo">
+        </section>
     </main>
 
     <section class="login-section">
         <h2>Login</h2>
-        <button class="login-button">Login</button>
+        <button class="login-button">Find School</button>
     </section>
 
-    <footer>
-        <p>Additional Info / How to Login</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </footer>
+    <!-- Initialize the AutoTyping effect -->
+    <script>
+        const exampleText = [ 
+            "MarkMaster is intuitive.",
+            "MarkMaster is efficient.",
+            "MarkMaster is reliable.",
+            "MarkMaster is your grading companion."];
+        const exampleTyping = new AutoTyping('.example-selector', exampleText, {
+            typeSpeed: 50,
+            deleteSpeed: 50,
+            waitBeforeDelete: 2000,
+            waitBetweenWords: 500,
+        });
+        exampleTyping.start()
+    </script>
+           
 </body>
 </html>
