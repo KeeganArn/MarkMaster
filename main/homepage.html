@@ -7,17 +7,12 @@
     <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-    <header>
-        <p>This is an example: <span class="example-selector"></span></p>
 
-        <script src="dist/autotyping.min.js"></script>
+    <header>
+        <h1>Welcome to MarkMaster™</h1>
     </header>
 
     <main>
-        <section class="typing-effect">
-            <span id="auto-type"></span>
-        </section>
-
         <section class="logo-container">
             <img src="markmasterlogo.png" alt="MarkMaster Logo" class="logo">
         </section>
@@ -25,24 +20,8 @@
 
     <section class="login-section">
         <h2>Login</h2>
-        <button class="login-button">Find School</button>
+        <a href="find-school.html" class="login-button">Find School</a>
     </section>
 
-    <!-- Initialize the AutoTyping effect -->
-    <script>
-        const exampleText = [ 
-            "MarkMaster is intuitive.",
-            "MarkMaster is efficient.",
-            "MarkMaster is reliable.",
-            "MarkMaster is your grading companion."];
-        const exampleTyping = new AutoTyping('.example-selector', exampleText, {
-            typeSpeed: 50,
-            deleteSpeed: 50,
-            waitBeforeDelete: 2000,
-            waitBetweenWords: 500,
-        });
-        exampleTyping.start()
-    </script>
-           
 </body>
 </html>

@@ -25,7 +25,37 @@ header {
     top: 0;
 }
 
-/* Logo Container with Glassmorphism Effect */
+/* Search Section */
+.search-section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    width: 250px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Search Button */
+.search-button {
+    background: rgb(16, 33, 91);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
 .logo-container {
     width: 200px;
     height: 200px;
@@ -40,48 +70,25 @@ header {
     transition: transform 0.3s ease-in-out;
 }
 
-.logo-container:hover {
+.search-button:hover {
+    background: rgb(0, 0, 0);;
     transform: scale(1.1);
 }
 
-.logo {
-    width: 80%;
-    height: 80%;
-    border-radius: 50%;
-    border: 3px solid white;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-}
-
-/* Login Section */
-.login-section {
-    width: 300px;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 25px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.login-section:hover {
-    transform: scale(1.05);
-}
-
-/* Button Styling */
-.login-button {
-    background: linear-gradient(45deg, #1f31f6, #1c76e4);
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
+/* Back Button */
+.back-button {
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    background: rgb(16, 33, 91);
     color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
-.login-button:hover {
-    background: linear-gradient(45deg, #0b8cf6, #3ab2e6);
-    box-shadow: 0 0 10px rgba(231, 230, 230, 0.7);
+.back-button:hover {
+    background: rgb(0, 0, 0);
     transform: scale(1.1);
 }
