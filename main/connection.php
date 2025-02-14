@@ -1,13 +1,14 @@
 <?php
 $host = 'localhost';
 $dbname = 'markmaster';
-$username = 'root'; // Change if needed
-$password = ''; // Change if needed
+$username = 'root'; // Default for XAMPP
+$password = ''; // Default for XAMPP
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
+// Create MySQLi connection
+$conn = mysqli_connect($host, $username, $password, $dbname);
+
+// Check the connection
+if (!$conn) {
+    die("Database connection failed: " . mysqli_connect_error());
 }
 ?>

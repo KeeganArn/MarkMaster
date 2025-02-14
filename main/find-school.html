@@ -14,12 +14,53 @@
 
     <main>
         <section class="search-section">
-            <input type="text" placeholder="Enter school name..." class="search-box">
-            <button class="search-button">Search</button>
+            <input type="text" placeholder="Enter school name..." class="search-box" id="schoolname">
+            <button class="search-button" onclick="searchSchool()">Search</button>
         </section>
+
+        <div id="result-container"></div> <!-- Results will be displayed here -->
 
         <a href="homepage.html" class="back-button">⬅ Back to Home</a>
     </main>
+
+    <script>
+        function searchSchool() {
+            const schoolname = document.getElementById("schoolname").value;
+
+            if (schoolname.trim() === "") {
+                alert("Please enter a school name.");
+                return;
+            }
+
+            fetch("findschool.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "schoolname=" + encodeURIComponent(schoolname)
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultContainer = document.getElementById("result-container");
+                resultContainer.innerHTML = "";
+
+                if (data.length === 0) {
+                    resultContainer.innerHTML = "<p>No schools found.</p>";
+                } else {
+                    let html = "<ul>";
+                    data.forEach(school => {
+                        html += `<li>${school.schoolname}</li>`; 
+                    });
+                    html += "</ul>";
+                    resultContainer.innerHTML = html;
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+                document.getElementById("result-container").innerHTML = "<p>Something went wrong. Please try again.</p>";
+            });
+        }
+    </script>
 
 </body>
 </html>
